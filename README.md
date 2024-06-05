@@ -21,11 +21,11 @@
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/e6f5f6e7-5dbc-4b48-8459-524f214bf43f)
 
-- Next I tried to send a PUT request after adding content from example in microsoft documentation. This is the response I got.
+- Next I tried to send a PUT request after adding content from example in microsoft documentation. This is the response I got. [Link](https://learn.microsoft.com/en-us/rest/api/synapse/data-plane/pipeline/create-or-update-pipeline?view=rest-synapse-data-plane-2020-12-01&tabs=HTTP#pipelines_create) to PUT request documentation.
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/892a4cb5-c57d-4d54-a648-f74efd32f04b)
 
-- Still no pipeline was created.
+- Still no pipeline was created in workspace "gitsynapsetesting2it".
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/43f61e3c-ee9e-469b-8157-bb61ee2ead95)
 
