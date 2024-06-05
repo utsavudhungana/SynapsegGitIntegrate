@@ -17,7 +17,7 @@
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/1171c0c4-7c51-418d-9e99-326942d0d8f5)
 
-- Got an 202 Accepted response with state mentioned "Updating". Waited 5 min and refereshed synsapse studio. Pipeline was not created here.
+- Got an 202 Accepted response with state mentioned "Creating". Waited 5 min and refereshed synsapse studio. Pipeline was not created here.
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/e6f5f6e7-5dbc-4b48-8459-524f214bf43f)
 
