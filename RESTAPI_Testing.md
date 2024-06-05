@@ -29,9 +29,13 @@
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/43f61e3c-ee9e-469b-8157-bb61ee2ead95)
 
-- Tried to create notebook as well but ended up with same outcome. Here, postman response shows accepted but notebook is not created in synapse workspace.
+- Now I tried to create. Here, postman response shows accepted and notebook created in synapse workspace. Though there is pre-requesite of having same spark pool already existing.
 
-![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/805978af-5a70-44b3-baf2-fa6e37fec0ea)
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/71ab72e1-3dd6-4d55-a8f5-5fa4eb78b986)
+
+- Here is the screenshot of new notebook created in IT environment. Note spark pool already attached to it. Also, output is also shown
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/d28ca75f-f88e-48c2-bb87-d662fe7fb1a6)
+
 
 - Here are logs showing completed action.
 
