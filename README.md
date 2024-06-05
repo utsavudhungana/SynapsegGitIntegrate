@@ -29,3 +29,15 @@
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/43f61e3c-ee9e-469b-8157-bb61ee2ead95)
 
+- Tried to create notebook as well but ended up with same outcome. Here, postman response shows accepted but notebook is not created in synapse workspace.
+
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/805978af-5a70-44b3-baf2-fa6e37fec0ea)
+
+- Here are logs showing completed action.
+
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/dc704f87-6b2f-4729-a3cc-ec0e8ec4f6bc)
+
+
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/7dcfac20-1631-46bf-ad36-a4f5233825a7)
+
+Logs can be found in root directory named query_data.csv
