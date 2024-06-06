@@ -82,7 +82,11 @@ And the pipeline is not created since its missing test3notebook that it is refer
 
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/eccd517b-3b65-48e4-becb-6eef94f91c30)
 
-- 
+- Now in this case, where I created test3notebook manually(did manual because RESTAPI can create without preexisting spark or override spark name) in IT env without attaching spark, then deployed pipeline3 it worked.
+
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/3dd148df-f3dd-48e3-80cf-6f0d4d207fb0)
+
+
 
 - Here are some screenshot of logs showing completed action. Note: It does not give any error response even when notebook is not created.
 
