@@ -13,6 +13,15 @@
 
   ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/a8351415-ee9e-4791-9488-57a5fa41182b)
 
+- Lets try to create change linked service name to datalake storage name of target workspace. I changed "gitsynapsetesting-WorkspaceDefaultStorage" to  "gitsynapsetesting2it-WorkspaceDefaultStorage" in referenceName under linkedServiceName and sent PUT request again.
+
+ ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/b157375e-4f60-448a-b2fb-d59e5cda6c03)
+
+- I got updating state and this time dataset named "Dataset1" gets created in target workspace.
+
+  ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/30e38611-ea55-4679-ad0d-dab88c92c0e5)
+
+- In this testing we found that linkedservice is one of the dependency of datasets i.e linkedservice need to pre-exits. Override parameter is also required here.
 
 
 
