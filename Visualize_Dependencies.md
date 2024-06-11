@@ -10,7 +10,7 @@
   ```
   $RootFolder = "x:repo\synapse"
   ```
-- Import and generate mermaid diagram, then save it as .md file.
+- This then generates mermaid diagram from given repo, then saves it as .md file.
 
   ```
   $synapse = Import-SynapseFromFolder -RootFolder $RootFolder -SynapseWorkspaceName 'whatever'
