@@ -1,7 +1,7 @@
 - Install this module first
 
-  `` $module = 'azure.synapse.tools'
-  Install-Module $module -Scope CurrentUser ``
+  ``` $module = 'azure.synapse.tools'
+  Install-Module $module -Scope CurrentUser ```
 
 - Setup root folder of artifacts repository.
 
