@@ -1,16 +1,21 @@
 - Install this module first
 
-  ``` $module = 'azure.synapse.tools'
-  Install-Module $module -Scope CurrentUser ```
+  ```
+  $module = 'azure.synapse.tools'
+  Install-Module $module -Scope CurrentUser
+  ```
 
 - Setup root folder of artifacts repository.
 
-  ``$RootFolder = "x:repo\synapse"``
-
+  ```
+  $RootFolder = "x:repo\synapse"
+  ```
 - Import and generate mermaid diagram, then save it as .md file.
 
-  ``$synapse = Import-SynapseFromFolder -RootFolder $RootFolder -SynapseWorkspaceName 'whatever'
-  Get-SynapseDocDiagram -synapse $synapse | Set-Content -Path 'synapse-diagram.md' ``
+  ```
+  $synapse = Import-SynapseFromFolder -RootFolder $RootFolder -SynapseWorkspaceName 'whatever'
+  Get-SynapseDocDiagram -synapse $synapse | Set-Content -Path 'synapse-diagram.md'
+  ```
 
 - Install this extension in VS Code. Then you will be able to visualize the diagram. Extension ID: bierner.markdown-mermaid
 
