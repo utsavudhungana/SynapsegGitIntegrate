@@ -5,7 +5,7 @@
   Install-Module $module -Scope CurrentUser
   ```
 
-- Setup root folder of artifacts repository.
+- Setup root folder of artifacts repository. Use $pwd for current dir
 
   ```
   $RootFolder = "x:repo\synapse"
