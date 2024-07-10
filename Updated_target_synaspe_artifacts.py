@@ -4,6 +4,12 @@ import gitlab
 import argparse
 from azure.cli.core import get_default_cli
 
+#From above modules requests, gitlab, azure-cli-core needs to be installed if not already.
+
+#Usage: 
+# #for Update_target_synapse_artifacts.py program. Env var needs to be set as GITLAB_PRIVATE_TOKEN
+# python Update_target_synapse_artifacts.py --repo_id 58604203 --ref main --target_workspace_name gitsynapsetesting2it --artifact_type notebooks --directory_path notebook
+
 def get_file_paths_from_gitlab_directory(repo_id, directory_path, ref, gitlab_url, private_token):
     gl = gitlab.Gitlab(gitlab_url, private_token=private_token, api_version=4)
     project = gl.projects.get(repo_id)
