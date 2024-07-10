@@ -1,4 +1,4 @@
-# Pre-req : pip install azure-mgmt-synapse azure-identity. Also, ensure necessary Azure credentials set up for DefaultAzureCredential.
+# Pre-req : pip install azure-mgmt-synapse azure-identity. Also, ensure necessary Azure credentials set up for DefaultAzureCredential. Set env variables AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET with respective value. Also, make sure to have contributor access added to the service principal in studio and workspace of both synapse instances. 
 # Usage: python sync_synapse_pipeline.py --source_workspace_name source_workspace_name --target_workspace_name target_workspace_name
 # Authored By: Utsav Dhungana
 
