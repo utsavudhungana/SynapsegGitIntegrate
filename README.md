@@ -7,3 +7,8 @@ You can find logs [here](query_data.csv)
 Deployment for these types of resources are skipped.
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/9a28b6a9-26ec-4ab8-9a9c-c739f3649834)
 
+
+----------------------------- Misc --------------------------------
+![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/d2e56661-7624-4bc9-a063-ccf0cd311b1e)
+
+
