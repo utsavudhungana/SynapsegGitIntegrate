@@ -1,4 +1,4 @@
-- Pre-requisite: Create Container Registry in Azure within your resource group.
+- Pre-requisite: Create Container Registry in Azure within your resource group. Az Cli and Docker Cli is needed. 
 - Created [this](push_dir.sh) shell script which will push the content of a specified directly as docker image to container registry.
 - Make sure to get access to container regirstry before running the script. Run the script with this values:  
 ![image](https://github.com/user-attachments/assets/b5d1afa1-404d-4317-b862-4925b3de93ed)
