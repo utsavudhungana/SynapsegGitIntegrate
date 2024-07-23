@@ -1,5 +1,5 @@
 - Pre-requisite: Create Container Registry in Azure within your resource group.
-- Created this shell script which will push the content of a specified directly as docker image to container registry.
+- Created [this](push_dir.sh) shell script which will push the content of a specified directly as docker image to container registry.
 - Make sure to get access to container regirstry before running the script. Run the script with this values:  
 ![image](https://github.com/user-attachments/assets/b5d1afa1-404d-4317-b862-4925b3de93ed)
 
@@ -9,7 +9,7 @@
 - Checked in my container registry to verify and here it is bravo!!:
 ![image](https://github.com/user-attachments/assets/9dff2ceb-9120-45db-b536-6110486fa18b)
 
-- Next up created this shell script to pull the image from the registry run it in docker container and copy its data to the current system in a directory.
+- Next up created [this](pull_dir.sh) shell script to pull the image from the registry run it in docker container and copy its data to the current system in a directory.
   
 - Ran it with below values:
 ![image](https://github.com/user-attachments/assets/56c765a6-eea4-4292-be62-0903d7d24613)
