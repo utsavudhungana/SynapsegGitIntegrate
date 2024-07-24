@@ -1,3 +1,4 @@
+**Test1**
 - Created couple of spark definition with file path to a python script and attached small spark pool to it.
 ![image](https://github.com/user-attachments/assets/de7f32c5-f45e-4922-a828-65739f2e44ac)
 
@@ -56,9 +57,30 @@
 ![image](https://github.com/user-attachments/assets/5d8c8386-a60a-4aa2-bf01-33dced15caf5)
 
 -Screeshot of spark pool with same name in both workspace.
-
 ![image](https://github.com/user-attachments/assets/316c314c-72c5-4f46-af42-2abe3aa9a1cd)
 
 ![image](https://github.com/user-attachments/assets/39b02e25-3564-4583-9f0c-04cd1f66edd9)
 
 - This proves that Spark Job definition export and import using az cli cannot import all configuration and content of the object.
+
+**Test3 with Rest API**
+
+- Here is the screen shot of the Spark Definition that I am trying to send to another workspace. Notice Spark pool name pool1 is attached an url is added.
+![image](https://github.com/user-attachments/assets/2963b45f-52d4-41c1-b9f8-bbd3f38a4516)
+
+
+- Crafted GET request to retrieve Spark Definition from the dev workspace. Make sure to get bearer token using az account.
+  ``` https://dev-1.dev.azuresynapse.net/sparkJobDefinitions/Sparkdefinition1?api-version=2020-12-01 ```
+- Got the response back with accepted status.
+ ![image](https://github.com/user-attachments/assets/d6231de7-9452-489e-8f72-7debc34842cc)
+
+- Next, I crafted another PUT request to create spark definition in another synapse workspace. Posted the reponse from earlier request in body section of PUT request. Got the response back with creating status.
+``` https://dev-2.dev.azuresynapse.net/sparkJobDefinitions/Sparkdefinition1?api-version=2020-12-01 ```
+![image](https://github.com/user-attachments/assets/edf79ba1-13ac-45d6-971d-4cb869bfbe50)
+
+- Here is the screenshot in dev2 workspace after PUT request is completed. Notice: Spark pool with same name pool1 is attached and url exist as well.
+![image](https://github.com/user-attachments/assets/c1d5893c-bfd1-44fd-9a84-87041aff6738)
+
+-This proves that REST API is able to import content correctly unlike Az CLI.
+
+
