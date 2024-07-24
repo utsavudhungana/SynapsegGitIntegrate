@@ -9,6 +9,7 @@
     az synapse spark-job-definition list --workspace-name $workspace_name --query "[].name" -o tsv
   ```
 - Stored the list in an array in bash then used loop to get spark job definition content and store as json file.
+
   ```
    mapfile -t job_definition_array < <(az synapse spark-job-definition list --workspace-name $source_workspace_name --query "[].name" -o tsv | sed 's/ //g')
   ```
@@ -70,11 +71,13 @@
 
 
 - Crafted GET request to retrieve Spark Definition from the dev workspace. Make sure to get bearer token using az account.
+  
   ``` https://dev-1.dev.azuresynapse.net/sparkJobDefinitions/Sparkdefinition1?api-version=2020-12-01 ```
 - Got the response back with accepted status.
  ![image](https://github.com/user-attachments/assets/d6231de7-9452-489e-8f72-7debc34842cc)
 
 - Next, I crafted another PUT request to create spark definition in another synapse workspace. Posted the reponse from earlier request in body section of PUT request. Got the response back with creating status.
+  
 ``` https://dev-2.dev.azuresynapse.net/sparkJobDefinitions/Sparkdefinition1?api-version=2020-12-01 ```
 ![image](https://github.com/user-attachments/assets/edf79ba1-13ac-45d6-971d-4cb869bfbe50)
 
