@@ -1,5 +1,9 @@
 **GET and CREATE or UPDATE NOTEBOOK/PIPELINE Testing**
 
+Get bearer token for synapse workspace rest calls.
+```
+az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv
+```
 This repo includes testing of GET and PUT synapse notebook/pipeline rest api to fetch and crete/update respectively. 
 
 You can find logs [here](query_data.csv)
