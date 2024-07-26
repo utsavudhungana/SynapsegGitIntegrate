@@ -14,7 +14,7 @@ mapfile -t var_array < <((curl -s -X GET -H "Authorization: Bearer $(az account 
 # Loop over the array to get each artifact type and save as .json file
 for var in "${var_array[@]}"; 
 do
-    curl -X GET -H "Authorization: Bearer $(az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv)" https://$source_workspace_name.dev.azuresynapse.net/$1s/$var?api-version=$api_version > "${var}.json";
+    curl -X GET -H "Authorization: Bearer $(az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv)" $source_endpoint/$1s/$var?api-version=$api_version > "${var}.json";
 done
 
 # Loop over the array and put each artifact type to target workspace.
@@ -23,7 +23,7 @@ do
 	if [[ $1 == "linkedservice" && $var == "$source_workspace_name-WorkspaceDefaultSqlServer" ]] || [[ $1 == "linkedservice" && $var == "$source_workspace_name-WorkspaceDefaultStorage" ]]; then
 	 continue
 	else
-		curl -X PUT -d @$var.json -H "Authorization: Bearer $(az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv)" https://$workspace_name.dev.azuresynapse.net/$1s/$var?api-version=$api_version;	
+		curl -X PUT -d @$var.json -H "Authorization: Bearer $(az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv)" $target_endpoint/$1s/$var?api-version=$api_version;	
 	fi
 done
 
