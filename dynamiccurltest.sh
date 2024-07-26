@@ -20,7 +20,11 @@ done
 # Loop over the array and put each artifact type to target workspace.
 for var in "${var_array[@]}"; 
 do
-	curl -X PUT -d @$var.json -H "Authorization: Bearer $(az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv)" https://$workspace_name.dev.azuresynapse.net/$1s/$var?api-version=$api_version;	
+	if [[ $1 == "linkedservice" && $var == "$source_workspace_name-WorkspaceDefaultSqlServer" ]] || [[ $1 == "linkedservice" && $var == "$source_workspace_name-WorkspaceDefaultStorage" ]]; then
+	 continue
+	else
+		curl -X PUT -d @$var.json -H "Authorization: Bearer $(az account get-access-token --resource=https://dev.azuresynapse.net/ --query accessToken --output tsv)" https://$workspace_name.dev.azuresynapse.net/$1s/$var?api-version=$api_version;	
+	fi
 done
 
 # Clean up
