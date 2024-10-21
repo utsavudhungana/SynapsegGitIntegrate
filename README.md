@@ -12,5 +12,9 @@ Deployment for these types of resources are skipped.
 ![image](https://github.com/utsavudhungana/SynapsegGitIntegrate/assets/139304818/9a28b6a9-26ec-4ab8-9a9c-c739f3649834)
 
 
+![image](https://github.com/user-attachments/assets/f719893b-0935-473d-a23d-9634b7d130ad)
+
+
+
 
 
