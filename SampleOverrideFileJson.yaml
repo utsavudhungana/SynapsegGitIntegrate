@@ -1,0 +1,15 @@
+{
+"Notebook 1_properties_bigDataPool_referenceName": "pool2",
+"Copy products_properties_0_typeProperties_sink": {
+    "type": "DelimitedTextSink",
+    "storeSettings": {
+      "type": "AzureBlobFSWriteSettings",
+      "copyBehavior": "FlattenHierarchy"
+    },
+    "formatSettings": {
+      "type": "DelimitedTextWriteSettings",
+      "quoteAllText": true,
+      "fileExtension": ".txt"
+    }
+  }
+}
