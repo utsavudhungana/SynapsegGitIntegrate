@@ -1,0 +1,104 @@
+
+---
+
+### **Slide 1: Title Slide**  
+**Title:** The Impact of GitHub Copilot in Code Porting  
+**Subtitle:** From TypeScript to GoLang – A Case Study  
+
+---
+
+### **Slide 2: Introduction**  
+- **Overview of the Project**  
+  - Porting a TypeScript module to GoLang  
+  - Original estimation: **5-6 weeks**  
+  - Actual completion with GitHub Copilot: **2-3 weeks**  
+
+---
+
+### **Slide 3: Challenges Without Copilot**  
+- Manual research for:  
+  - **Documentation** of GoLang modules  
+  - Syntax differences between TypeScript and GoLang  
+- High time consumption in writing repetitive boilerplate code  
+- Greater chances of human error in code translation  
+
+---
+
+### **Slide 4: How GitHub Copilot Helped**  
+- **Accelerated Development**  
+  - Suggested syntax and boilerplate for GoLang  
+  - Translated TypeScript constructs with high accuracy  
+- **Reduced Research Time**  
+  - Instant suggestions for GoLang equivalents of TypeScript functions  
+  - Access to relevant documentation snippets directly in the editor  
+- **Improved Productivity**  
+  - Focused on logic instead of repetitive coding tasks  
+
+---
+
+### **Slide 5: Key Metrics**  
+| **Metric**           | **Without Copilot** | **With Copilot**  |  
+|-----------------------|---------------------|-------------------|  
+| Estimated Duration    | 5-6 weeks           | 2-3 weeks         |  
+| Research Time         | High                | Low               |  
+| Manual Effort         | High                | Reduced by ~50%   |  
+| Accuracy              | Moderate            | High              |  
+
+---
+
+### **Slide 6: Copilot in Day-to-Day Scripting**  
+- **Time Savings:** Automates repetitive tasks like formatting, boilerplate generation, and error correction  
+- **Enhanced Learning:** Shows code snippets and solutions inline, acting as an assistant and educator  
+- **Documentation Shortcut:** Reduces the need to manually search for module and library documentation  
+- **Consistent Code Quality:** Ensures uniform standards across scripts  
+
+---
+
+### **Slide 7: Limitations of GitHub Copilot**  
+- **Translation Errors:**  
+  - Cannot translate all TypeScript constructs to GoLang perfectly  
+  - May require manual fixes and corrections  
+- **Use of Deprecated Code:**  
+  - Sometimes suggests outdated or deprecated syntax  
+- **Inconsistency:**  
+  - Suggestions are not always consistent or repeatable for similar prompts  
+- **Prompt Dependency:**  
+  - Effectiveness depends on providing clear and precise prompts  
+  - Vague or incorrect prompts can lead to inefficient suggestions  
+
+---
+
+### **Slide 8: Importance of Correct Prompts**  
+- **Why Prompts Matter:**  
+  - Accurate prompts help Copilot provide relevant suggestions  
+  - Avoids unnecessary iterations and errors  
+- **Tips for Effective Prompts:**  
+  - Be specific about functionality and context  
+  - Provide sample inputs and expected outputs where possible  
+  - Highlight the language and frameworks explicitly  
+
+---
+
+### **Slide 9: Visual Example**  
+- **Scenario:** TypeScript function being converted to GoLang  
+- Before: Manual conversion, multiple steps  
+- After: Copilot-assisted transformation in seconds (Add code snippets or screenshots here)  
+
+---
+
+### **Slide 10: Conclusion**  
+- **GitHub Copilot’s Impact**  
+  - Significant reduction in project duration  
+  - Enhanced focus on critical logic  
+  - Improved efficiency in cross-language porting tasks  
+- **Limitations:**  
+  - Cannot fully replace human oversight  
+  - Requires careful prompt creation and review of results  
+- **Broader Benefits:**  
+  - A reliable tool for scripting, prototyping, and learning  
+
+---
+
+### **Slide 11: Thank You**  
+- Questions?  
+- Your Name & Contact Details  
