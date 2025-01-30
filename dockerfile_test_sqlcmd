@@ -1,0 +1,35 @@
+# Use the official SQL Server container image
+FROM mcr.microsoft.com/mssql/server:latest
+
+# Set environment variables for SQL Server
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD="YourStrong!Passw0rd"
+ENV MSSQL_PID=Developer
+
+# Define default environment variables (can be overridden at runtime)
+ENV SQL_SERVER="localhost"
+ENV DATABASE_NAME="TestDB"
+ENV DB_USER="testuser"
+ENV DB_PASSWORD="Test@1234"
+ENV SQL_QUERY="SELECT GETDATE();"  # Default test query
+
+# Install curl and Azure CLI
+RUN apt-get update && apt-get install -y \
+    curl \
+    apt-transport-https \
+    gnupg2 && \
+    curl -sL https://aka.ms/InstallAzureCLIDeb | bash && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Start SQL Server, create DB & user, then run sqlcmd query
+CMD /opt/mssql/bin/sqlservr & \
+    echo "Waiting for SQL Server to start..." && sleep 15 && \
+    echo "Creating database and user..." && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$SA_PASSWORD" -Q "CREATE DATABASE [$DATABASE_NAME];" && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$SA_PASSWORD" -Q "CREATE LOGIN [$DB_USER] WITH PASSWORD = '$DB_PASSWORD';" && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$SA_PASSWORD" -Q "USE [$DATABASE_NAME]; CREATE USER [$DB_USER] FOR LOGIN [$DB_USER]; ALTER ROLE db_owner ADD MEMBER [$DB_USER];" && \
+    echo "Database and user created successfully!" && \
+    echo "Running SQL Query: $SQL_QUERY" && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$SA_PASSWORD" -Q "$SQL_QUERY" && \
+    echo "SQLCMD query execution completed." && \
+    tail -f /dev/null
