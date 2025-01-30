@@ -36,3 +36,7 @@ CMD ["az login --service-principal -u \"$APP_ID\" -p \"$CLIENT_SECRET\" --tenant
       echo \"Running SQL Query...\" && \
       sqlcmd -S \"$SQL_SERVER\" -d \"$DATABASE\" -U \"$APP_ID\" -G -P \"$TOKEN\" -Q \"$SQL_QUERY\" && \
       echo \"SQLCMD execution completed.\""]
+
+#usage:
+#docker run --rm -e SQL_QUERY="SELECT COUNT(*) FROM Users;" sql-aad-auth
+
