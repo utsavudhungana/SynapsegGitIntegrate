@@ -1,0 +1,47 @@
+# Use the latest Ubuntu image
+FROM ubuntu:latest
+
+# Set environment variables for non-interactive installations
+ENV DEBIAN_FRONTEND=noninteractive
+ENV ACCEPT_EULA=Y
+
+# Define default environment variables (can be overridden at runtime)
+ENV MSSQL_SA_PASSWORD="YourStrong!Passw0rd"
+ENV MSSQL_PID=Developer
+ENV DATABASE_NAME="TestDB"
+
+# Install dependencies: curl, jq, Microsoft packages
+RUN apt-get update && apt-get install -y \
+    curl \
+    apt-transport-https \
+    gnupg2 \
+    software-properties-common \
+    wget \
+    jq \
+    sudo
+
+# Install Microsoft SQL Server
+RUN curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
+    add-apt-repository "$(curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/mssql-server-2019.list)" && \
+    apt-get update && apt-get install -y mssql-server && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install Microsoft SQL Tools (sqlcmd)
+RUN curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | tee /etc/apt/sources.list.d/mssql-release.list && \
+    apt-get update && ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev && \
+    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install Azure CLI
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+
+# Start SQL Server and create a database
+CMD (/opt/mssql/bin/sqlservr & \
+    echo "Waiting for SQL Server to start..." && sleep 20 && \
+    echo "Creating database: $DATABASE_NAME..." && \
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "$MSSQL_SA_PASSWORD" -Q "CREATE DATABASE [$DATABASE_NAME];" && \
+    echo "Database $DATABASE_NAME created successfully!" && \
+    tail -f /dev/null)
+#usage:
+#docker build -t ubuntu-sql-deps .
+#docker run --rm -p 1433:1433 -e MSSQL_SA_PASSWORD="YourStrong!Passw0rd" ubuntu-sql-deps
